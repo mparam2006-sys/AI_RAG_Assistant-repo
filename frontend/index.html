@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI RAG Document Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+
+            <h1>🤖 AI RAG Document Assistant</h1>
+
+            <p>
+                Upload a PDF or TXT document and ask questions
+                about its contents.
+            </p>
+
+        </header>
+
+
+        <!-- UPLOAD SECTION -->
+        <section class="card">
+
+            <h2>📄 Upload Document</h2>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept=".pdf,.txt"
+            >
+
+            <button
+                id="uploadButton"
+                onclick="uploadDocument()"
+            >
+                Upload Document
+            </button>
+
+            <div id="uploadStatus"></div>
+
+        </section>
+
+
+        <!-- QUESTION SECTION -->
+        <section class="card">
+
+            <h2>💬 Ask a Question</h2>
+
+            <textarea
+                id="questionInput"
+                placeholder="Ask something about your document..."
+            ></textarea>
+
+            <button
+                id="askButton"
+                onclick="askQuestion()"
+            >
+                Ask Question
+            </button>
+
+        </section>
+
+
+        <!-- ANSWER SECTION -->
+        <section class="card">
+
+            <h2>🤖 Answer</h2>
+
+            <div
+                id="answer"
+                class="answer-box"
+            >
+                Upload a document and ask a question.
+            </div>
+
+        </section>
+
+
+        <!-- RETRIEVED CONTEXT -->
+        <section class="card">
+
+            <h2>📚 Retrieved Context</h2>
+
+            <div id="sources">
+
+                <p class="empty-message">
+                    Relevant document chunks will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            AI-Powered RAG Document Assistant
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
